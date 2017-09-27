@@ -46,13 +46,19 @@ public class ApplicationTest {
     @Test
     public void greeting() throws Exception {
         mockMvc.perform(get("/greeting"))
-                .andExpect(content().string(containsString("Hello, World!")));
+                .andExpect(content().string(containsString("Hello, Gian-Luca!")));
     }
 
     @Test
     public void greetingWithUser() throws Exception {
         mockMvc.perform(get("/greeting").param("name", "Greg"))
                 .andExpect(content().string(containsString("Hello, Greg!")));
+    }
+
+    @Test
+    public void myNewSide() throws Exception {
+        mockMvc.perform(get("/myNewSide"))
+                .andExpect(content().string(containsString("I am 1 years old!")));
     }
 
 }
