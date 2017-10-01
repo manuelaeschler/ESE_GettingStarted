@@ -58,7 +58,7 @@ public class ApplicationTest {
     @Test
     public void myNewSide() throws Exception {
         mockMvc.perform(get("/myNewSide"))
-                .andExpect(content().string(containsString("I am 1 years old!")));
+                .andExpect(content().string(containsString("1 years old! and")));
     }
 
 }
